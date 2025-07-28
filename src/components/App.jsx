@@ -31,7 +31,7 @@ function App() {
     return(
         <>
         <header>
-            <h1>Pokemone memory game</h1>
+            <h1>POKEMONE MEMORY GAME</h1>
         </header>
         <main> 
             <Score/>

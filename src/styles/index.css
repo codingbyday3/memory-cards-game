@@ -4,6 +4,10 @@
     --clr-jet:#2F2F2F;
     --clr-mint-green:#CCFBFE;
     --clr-atomic-tangerine:#F29559;
+
+    /* font-familys */
+    --ff-inknut-antiqua:"Inknut Antiqua", serif;;
+    --ff-mulish:"Mulish", sans-serif;
 }
 
 *, *::before, *::after {
@@ -20,6 +24,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-mulish);
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -36,6 +41,7 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  font-family: var(--ff-inknut-antiqua);
 }
 #root, #__next {
   isolation: isolate;

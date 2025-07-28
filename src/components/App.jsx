@@ -13,6 +13,7 @@ function App() {
             setHighesScore(score)
         }
     },[score])
+
     return(
         <>
         <header>

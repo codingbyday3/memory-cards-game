@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 
-export default function Cards(){
+export default function Cards({score}){
 
     const [pokemonList, setPokemonList] = useState([])
     const [displayedPokemons, setDisplayedPokemons] = useState([])
+    const [clickedPokemons, setClickedPokemons] = useState([])
     const POKEMON_LIMIT = 40
     const POKEMON_COUNT = 1017
 
@@ -54,12 +55,35 @@ export default function Cards(){
 
     },[pokemonList])
 
+    const reshufflePokemons = ()=>{
+        if(pokemonList.length >= POKEMON_LIMIT){
+            const randomIndex = []
+            const randomPokemons = []
+            while(randomPokemons.length < 8){
+                const randomNum = Math.floor(Math.random()*pokemonList.length)
+                if(!randomIndex.includes(randomNum)){
+                    randomPokemons.push(pokemonList[randomNum])
+                    randomIndex.push(randomNum)
+                }
+
+            }
+            setDisplayedPokemons(randomPokemons)           
+        }
+    }
+
+    const handleCardClick = (pokemon)=>{
+        if(!clickedPokemons.includes(pokemon)){
+            setClickedPokemons([...clickedPokemons, pokemon])
+            reshufflePokemons()
+        }
+        console.log(clickedPokemons)
+    }
 
     return(
         <section className="cards-container">
             {displayedPokemons.map((pokemon, index)=>{
                 return(
-                    <button key= {index} className="invisible-box">
+                    <button onClick={()=> handleCardClick(pokemon.name)} key= {index} className="invisible-box">
                         <div className="pokemon-card">
                             <div className="front-card">
                                 <h2>{pokemon.name}</h2>

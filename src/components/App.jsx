@@ -1,25 +1,26 @@
+import { useState, useEffect } from "react"
 import Cards from "./cards"
+import Score from "./Score"
 
-
-function Score(){
-    return(
-        <section className="score-container">
-            <p>Score: 12</p>
-            <p>Highest score: 20</p>
-        </section>
-    )
-}
 
 
 function App() {
+    const [score, setScore] = useState(0)
+    const [highestScore, setHighesScore] = useState(0)
+
+    useEffect(()=>{
+        if(score > highestScore){
+            setHighesScore(score)
+        }
+    },[score])
     return(
         <>
         <header>
             <h1>POKEMONE MEMORY GAME</h1>
         </header>
         <main> 
-            <Score/>
-            <Cards/>
+            <Score score={score} highestScore={highestScore}/>
+            <Cards score={score}/>
         </main>
         </>
     )

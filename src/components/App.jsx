@@ -13,8 +13,13 @@ function Cards(){
         <section className="cards-container">
             <div className="invisible-box">
                 <div className="pokemon-card">
-                    <h2>Pikachu</h2>
-                    <img src="" alt="" />
+                    <div className="front-card">
+                        <h2>Pikachu</h2>
+                        <img src="" alt="" />
+                    </div>
+                    <div className="back-card">
+                        Click your pick
+                    </div>
                 </div>
             </div>
             <div className="invisible-box">

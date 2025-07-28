@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 export default function Cards(){
 
     const [pokemonList, setPokemonList] = useState([])
-        const POKEMON_LIMIT = 50
+        const POKEMON_LIMIT = 5
         const POKEMON_COUNT = 1017
 
     useEffect(() => {

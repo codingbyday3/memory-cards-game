@@ -3,8 +3,9 @@ import { useState, useEffect } from "react"
 export default function Cards(){
 
     const [pokemonList, setPokemonList] = useState([])
-        const POKEMON_LIMIT = 5
-        const POKEMON_COUNT = 1017
+    const [displayedPokemons, setDisplayedPokemons] = useState([])
+    const POKEMON_LIMIT = 40
+    const POKEMON_COUNT = 1017
 
     useEffect(() => {
         const getPokemonInfo = async () => {
@@ -36,9 +37,27 @@ export default function Cards(){
         getPokemonInfo();
     }, []);
 
+    useEffect(()=>{
+        if(pokemonList.length >= POKEMON_LIMIT){
+            const randomIndex = []
+            const randomPokemons = []
+            while(randomPokemons.length < 8){
+                const randomNum = Math.floor(Math.random()*pokemonList.length)
+                if(!randomIndex.includes(randomNum)){
+                    randomPokemons.push(pokemonList[randomNum])
+                    randomIndex.push(randomNum)
+                }
+
+            }
+            setDisplayedPokemons(randomPokemons)           
+        }
+
+    },[pokemonList])
+
+
     return(
         <section className="cards-container">
-            {pokemonList.map((pokemon, index)=>{
+            {displayedPokemons.map((pokemon, index)=>{
                 return(
                     <button key= {index} className="invisible-box">
                         <div className="pokemon-card">
@@ -47,7 +66,7 @@ export default function Cards(){
                                 <img src={pokemon.image} alt={pokemon.name} />
                             </div>
                             <div className="back-card">
-                                <p>Click your pick</p>
+                                <p>Click your guess</p>
                             </div>
                         </div>
                     </button>

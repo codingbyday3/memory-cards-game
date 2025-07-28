@@ -58,8 +58,12 @@ h1, h2, h3, h4, h5, h6 {
 header{
     display: flex;
     align-items: center;
-    padding: 0 2rem;
     background-color: var(--clr-mint-green);
+}
+
+header,
+main{
+    padding: 0 2rem;
 }
 
 h1{
@@ -100,5 +104,29 @@ h1{
         1px  4px 0 var(--clr-blue),
         2px  4px 0 var(--clr-blue),
         3px  4px 0 var(--clr-blue);
+}
+
+main{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    padding-top:2rem;
+    gap: 2rem;
+}
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 
 }
+
+.score-container p{
+    background-color: var(--clr-raspberry-rose);
+    width: fit-content;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+

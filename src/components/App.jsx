@@ -1,7 +1,7 @@
 
 function Score(){
     return(
-        <section>
+        <section className="score-container">
             <p>Score: 12</p>
             <p>Highest score: 20</p>
         </section>

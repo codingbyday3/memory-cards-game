@@ -1,12 +1,23 @@
-# React + Vite
+# Pokémon Memory Cards Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and fun memory game for when you're bored! Test your memory by clicking Pokémon cards without repeating any — how high can you score?
 
-Currently, two official plugins are available:
+## 🎮 How to Play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Click any card to start the game.
+- Try to remember which cards you’ve already clicked.
+- If you click a card you’ve already selected, it’s **game over**.
+- The goal is to get the **highest score** possible.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Uses [PokeAPI.co](https://pokeapi.co/) to render Pokémon on the cards.
+- Cards reshuffle after each click.
+- Increments score for each unique card clicked.
+- Tracks and saves the **highest score** achieved.
+
+## 🛠️ Technologies Used
+
+- **HTML** – Markup structure of the app  
+- **CSS** – Styling and layout  
+- **JavaScript (React)** – Interactive UI built using the React framework

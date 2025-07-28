@@ -1,3 +1,5 @@
+import Cards from "./cards"
+
 
 function Score(){
     return(
@@ -8,36 +10,6 @@ function Score(){
     )
 }
 
-function Cards(){
-    return(
-        <section className="cards-container">
-            <div className="invisible-box">
-                <div className="pokemon-card">
-                    <div className="front-card">
-                        <h2>Pikachu</h2>
-                        <img src="" alt="" />
-                    </div>
-                    <div className="back-card">
-                        Click your pick
-                    </div>
-                </div>
-            </div>
-            <div className="invisible-box">
-                <div className="pokemon-card">
-                    <h2>Pikachu</h2>
-                    <img src="" alt="" />
-                </div>
-            </div>
-            <div className="invisible-box">
-                <div className="pokemon-card">
-                    <h2>Pikachu</h2>
-                    <img src="" alt="" />
-                </div>
-            </div>
-
-        </section>
-    )
-}
 
 function App() {
     return(

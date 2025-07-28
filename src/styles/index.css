@@ -147,7 +147,10 @@ main{
     will-change: transform;
     transform-style: preserve-3d;
 }
-
+.invisible-box{
+  background-color: transparent;
+  border: none;
+}
 .front-card,
 .back-card {
   position: absolute;
@@ -174,7 +177,7 @@ main{
 
 .invisible-box:hover .pokemon-card{
     transform: rotateY(0.5turn);
-
+    cursor: pointer;
 }
 
 

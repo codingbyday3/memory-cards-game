@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Cards({score}){
+export default function Cards({resetGame, handleScore}){
 
     const [pokemonList, setPokemonList] = useState([])
     const [displayedPokemons, setDisplayedPokemons] = useState([])
@@ -74,9 +74,12 @@ export default function Cards({score}){
     const handleCardClick = (pokemon)=>{
         if(!clickedPokemons.includes(pokemon)){
             setClickedPokemons([...clickedPokemons, pokemon])
-            reshufflePokemons()
+            handleScore()
+        }else{
+            setClickedPokemons([])
+            resetGame()
         }
-        console.log(clickedPokemons)
+        reshufflePokemons()
     }
 
     return(

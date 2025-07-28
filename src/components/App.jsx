@@ -8,11 +8,16 @@ function App() {
     const [score, setScore] = useState(0)
     const [highestScore, setHighesScore] = useState(0)
 
-    useEffect(()=>{
+    const resetGame = ()=>{
         if(score > highestScore){
             setHighesScore(score)
         }
-    },[score])
+        setScore(0)
+    }
+
+    const handleScore = ()=>{
+        setScore(score + 1)
+    }
 
     return(
         <>
@@ -21,7 +26,7 @@ function App() {
         </header>
         <main> 
             <Score score={score} highestScore={highestScore}/>
-            <Cards score={score}/>
+            <Cards resetGame={resetGame} handleScore={handleScore}/>
         </main>
         </>
     )

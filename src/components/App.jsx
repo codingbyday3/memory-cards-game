@@ -8,6 +8,25 @@ function Score(){
     )
 }
 
+function Cards(){
+    return(
+        <section className="cards-container">
+            <div className="pokemo-card">
+                <h2>Pikachu</h2>
+                <img src="" alt="" />
+            </div>
+            <div className="pokemo-card">
+                <h2>Pikachu</h2>
+                <img src="" alt="" />
+            </div>
+            <div className="pokemo-card">
+                <h2>Pikachu</h2>
+                <img src="" alt="" />
+            </div>
+        </section>
+    )
+}
+
 function App() {
     return(
         <>
@@ -16,7 +35,7 @@ function App() {
         </header>
         <main> 
             <Score/>
-            {/* <Cards/> */}
+            <Cards/>
         </main>
         </>
     )
